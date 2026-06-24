@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2.5 bg-orange-500 text-white rounded-xl hover:bg-orange-600 transition-colors font-medium;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2.5 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors font-medium;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2.5 bg-red-500 text-white rounded-xl hover:bg-red-600 transition-colors font-medium;
+  }
+
+  .btn-outline {
+    @apply px-4 py-2.5 border-2 border-gray-200 text-gray-700 rounded-xl hover:border-gray-300 transition-colors font-medium;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm p-6 hover:shadow-md transition-shadow;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-gray-100 border-0 border-b-2 border-transparent rounded-t-lg focus:outline-none focus:bg-white focus:border-orange-500 transition-all;
+  }
+}
+
+/* Table Styles */
+.table-container {
+  @apply bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100;
+}
+
+.table-container table {
+  @apply w-full border-collapse;
+}
+
+.table-container thead {
+  @apply bg-gradient-to-r from-gray-50 to-gray-100 border-b-2 border-gray-200;
+}
+
+.table-container th {
+  @apply px-6 py-4 text-left text-xs font-bold text-gray-600 uppercase tracking-wider;
+}
+
+.table-container th:first-child {
+  @apply rounded-tl-2xl;
+}
+
+.table-container th:last-child {
+  @apply rounded-tr-2xl;
+}
+
+.table-container tbody tr {
+  @apply border-b border-gray-100 hover:bg-orange-50/30 transition-all duration-200;
+}
+
+.table-container tbody tr:last-child {
+  @apply border-b-0;
+}
+
+.table-container tbody tr:hover {
+  @apply shadow-sm;
+}
+
+.table-container td {
+  @apply px-6 py-4 text-sm text-gray-700;
+}
+
+.table-container td:first-child {
+  @apply font-medium text-gray-900;
+}
+
+/* Empty State */
+.table-empty {
+  @apply text-center py-16;
+}
+
+.table-empty-icon {
+  @apply w-16 h-16 mx-auto mb-4 text-gray-300;
+}
+
+.table-empty-text {
+  @apply text-gray-500 text-lg font-medium;
+}
+
+.table-empty-subtext {
+  @apply text-gray-400 text-sm mt-1;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Table Row Animation */
+.table-row-enter {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Status Badge Enhancement */
+.status-badge {
+  @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+/* Action Buttons */
+.action-btn {
+  @apply p-2 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95;
+}
+
+.action-btn-view {
+  @apply action-btn text-blue-600 hover:bg-blue-50 hover:shadow-sm;
+}
+
+.action-btn-edit {
+  @apply action-btn text-amber-600 hover:bg-amber-50 hover:shadow-sm;
+}
+
+.action-btn-delete {
+  @apply action-btn text-red-600 hover:bg-red-50 hover:shadow-sm;
+}
+
+.action-btn-success {
+  @apply action-btn text-green-600 hover:bg-green-50 hover:shadow-sm;
+}

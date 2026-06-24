@@ -1,0 +1,29 @@
+# OS and editor files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Archives and local bundles
+*.zip
+*.tar.gz
+*.tgz
+
+# Frontend build artifacts
+smart-campus-frontend/node_modules/
+smart-campus-frontend/dist/
+smart-campus-frontend/dist-ssr/
+smart-campus-frontend/.vite/
+smart-campus-frontend/*.local
+
+# Backend build artifacts and uploads
+smart-campus-backend/target/
+smart-campus-backend/.mvn/
+smart-campus-backend/uploads/
+smart-campus-backend/*.log
