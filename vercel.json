@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "installCommand": "npm install --prefix smart-campus-frontend",
+  "buildCommand": "npm run build --prefix smart-campus-frontend",
+  "outputDirectory": "smart-campus-frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
